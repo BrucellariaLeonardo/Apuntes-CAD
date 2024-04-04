@@ -1,0 +1,46 @@
+\documentclass[a4paper, 10pt]{article}
+
+%https://www.overleaf.com/learn/latex/Multi-file_LaTeX_projects
+
+%\usepackage[spanish]{babel}
+\usepackage{adjustbox}
+\usepackage[a4paper, margin=1.5cm]{geometry}
+
+\renewcommand{\arraystretch}{2}
+
+\begin{document}
+
+\section{Tabla de pares de transformada de Fourier}
+
+\begin{adjustbox}{width = \textwidth}
+    \centering
+    \begin{tabular}{p{0.3\textwidth} | p{0.3\textwidth} | p{0.3\textwidth}}
+        \hline
+        Señal & Transformada en $f$ & Transformada en $\omega$ \\
+        \hline
+        $\sum_{-\infty}^{\infty}a_ke^{jk2\pi f_0t} = \sum_{-\infty}^{\infty}a_ke^{jk\omega_0t}$ & $\sum_{-\infty}^{\infty}a_k\delta(f - kf_0)$ & $2\pi\sum_{-\infty}^{\infty}a_k\delta(\omega - k\omega_0)$\\
+        \hline
+        $e^{j2\pi f_0t} = e^{j\omega_0t}$ & $\delta(f - f_0)$ & $2\pi\delta(\omega - \omega_0)$ \\
+        \hline
+        $cos(2\pi f_0t) = cos(\omega_0t)$ & $\frac{1}{2}[\delta(f - f_0) + \delta(f + f_0)]$& $\pi[\delta(\omega - \omega_0) + \delta(\omega + \omega_0)]$\\
+        \hline
+        $sin(2\pi f_0t) = sin(\omega_0t)$ & $\frac{1}{2j}[\delta(f - f_0) - \delta(f + f_0)]$& $\frac{1}{j\pi}[\delta(\omega - \omega_0) - \delta(\omega + \omega_0)]$\\
+        \hline
+        $1$ & $\delta(f)$ & $2\pi\delta(f)$ \\
+        \hline
+        $\frac{sinc(W t / \pi)}{\pi t}$ & & \\
+        \hline
+
+
+
+        $\Pi(\frac{t}{2T})$ & $|2T|sinc(2Tf)$ & $\frac{2sin(T\omega)}{\omega} = |2T|sinc(T\omega/\pi)$ \\
+
+
+        \hline
+    \end{tabular}
+
+\end{adjustbox}
+
+
+
+\end{document}
