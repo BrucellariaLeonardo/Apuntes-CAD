@@ -1,7 +1,11 @@
 \documentclass[a4paper, 10pt]{article}
+\usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage[a4paper, margin=1.5cm]{geometry}
-\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+
 \begin{document}
 
 
@@ -9,7 +13,16 @@
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[scale = 0.5]{./modulador.png}
+    \begin{subfigure}{.5\textwidth} %Modulador
+        \includegraphics[scale = 0.4]{./modulador.png}
+        %\caption{}
+        %\label{}    
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth} %Grafico de frecuencias
+        \includegraphics[scale = 0.3]{./espectro.png}    
+        %\caption{}
+        %\label{} 
+    \end{subfigure}
     $$x_{DBL}(t) = Re \{ A_c m(t) e^{j \pi f_ct} \} = A_c m(t) cos(2 \pi f_c t)$$
     $$ x_{DBL}(f) = A_c m(t) * \frac{[\delta(f+f_c) + \delta(f-f_c)]}{2} = \frac{A_c}{2} [m(f+f_c) + m(f-f_c)] $$
 \end{figure}
